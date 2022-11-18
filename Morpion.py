@@ -105,3 +105,4 @@ while gameRunning:
     IA(board)
     vérifWin()
     égalité(board)
+while
