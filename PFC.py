@@ -64,4 +64,3 @@ def game():
             print("Le score est de", score_Player, "a", score_IA, "avec", égalité, "égalités")
             print("BRAVO, vous avez gagnez")
             break
-        while
