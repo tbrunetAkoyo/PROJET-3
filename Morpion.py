@@ -107,8 +107,6 @@ def IA(board, currentPlayer):
     else:
         if verifCentre(board):
             board[4] = currentPlayer
-        # elif vérification si un pion est déjà posé de l'ia. Si oui vérifié comme commenter en dessous
-        # si non entrer dans vérifCorner.
         elif verifCorner(board):
             not_put = 1
             list_corner = [0, 2, 6, 8]
@@ -118,19 +116,7 @@ def IA(board, currentPlayer):
                     board[random_position] = currentPlayer
                     not_put = 0
 
-# Il va falloir regarder si tu as la possibilité de poser sur une diagonal où aucun pion enemi n'est posé.
-# Faire la même chose pour les verticales et horizontales
-
-# Privilégié les diagonales
-
-
     currentPlayer = changement(currentPlayer)
-    # while currentPlayer == "O":
-    #     position = random.randint (0,8)
-    #     if board[position] == "-" :
-    #         board[position] = "O"
-    #         currentPlayer = changement(currentPlayer)
-
     return currentPlayer, board
 
 def verifCentre(board):
@@ -226,10 +212,7 @@ def verifCloseWin(board, player):
 def game():
     board, currentPlayer, gameRunning = initGame()
     while gameRunning:
-        # Print board pour savoir où la partie en est.
-        # Pour que le joueur sache où il peut poser
         printBoard(board)
-        # Tour du player
         board = PlayerInput(board, currentPlayer)
         check = vérifWin(board)
         if check:
