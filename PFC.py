@@ -1,5 +1,5 @@
 import random
-
+1
 
 nom = input("veuillez saisir votre nom : ")
 score_Player = 0
