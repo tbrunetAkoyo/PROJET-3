@@ -138,9 +138,9 @@ def verifDiagoWin(board, player):
     diago2_list = [board[2], board[4], board[6]]
 
     if diago1_list.count(player) == 2:
-        for key, value in diago1.items():
-            if value == '-':
-                return key
+        for k, v in diago1.items():
+            if v == '-':
+                return k
     elif diago2_list.count(player) == 2:
         for k, v in diago2.items():
             if v == '-':
